@@ -1,0 +1,337 @@
+
+@charset "UTF-8";
+
+:root{
+    --smallFont: "Varela round";
+    --largeFont: "Varela round";
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--smallFont);
+}
+body{
+    line-height: 1.6;
+}
+h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-uppercase {
+    text-transform: uppercase !important;
+  }
+  
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 1.2rem;
+}
+.container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.3);
+}
+#bg-video{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    z-index: 1;
+    color: rgb(157, 186, 230);
+    margin: 3rem 0;
+}
+.content h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: var(--largeFont);
+    letter-spacing: 6px;
+    word-spacing: 5px;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+.content h1::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    border-radius: 5px;
+    width: 60%;
+    background: #ffbf00;
+}
+.content h2{
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    padding-top: 1.2rem;
+}
+.time-show{
+    margin: 3.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time-show div{
+    
+    background: rgba(255, 255, 255, 0);
+    margin: 0.5rem;
+    width: 150px;
+    height: 140px;
+    font-size: 72px;
+    color:rgba(68, 67, 67, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.time-show div span{
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+.time-show div p{
+    color: #ffffff65;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.container blockquote{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.container blockquote span{
+    font-size: 0.6rem;
+    display: inline-block;
+}
+
+
+.text-m {
+font-size: 72px;
+text-align: center;
+color: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+}
+.text-s {
+    font-size: 20px;
+    text-align: center;
+    color: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    }
+.flex-item {
+    padding: 30px;
+    height: 50px;
+    margin: 10px;
+    line-height: 20px;
+    text-align:end;
+}
+
+.bn5 {
+    position:absolute;
+    pointer-events: auto;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 20px;
+    padding: 0.6em 1em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor:pointer;
+    z-index: 0;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.bn5:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(20px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+.bn5:hover {
+    color: #f0f0f0;
+}
+
+.bn5:hover:before {
+    opacity: 1;
+}
+
+.bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.bn4 {
+    top: 38%;
+    position:absolute;
+    pointer-events: auto;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 20px;
+    padding: 0.6em 1em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor:pointer;
+    z-index: 0;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.bn4:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(20px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+.bn4:hover {
+    color: #f0f0f0;
+}
+
+.bn4:hover:before {
+    opacity: 1;
+}
+
+.bn4:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+@media screen and (min-width: 480px){
+    .content h1{
+        font-size: 3rem;
+    }
+    .time-show{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .time-show div{
+        flex: 0 0 calc(50% - 1rem);
+        width: 190px;
+        height: 180px;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .content h1{
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        padding: 0 3rem;
+    }
+    .time-show div{
+        flex: 0 0 calc(25% - 1rem);
+    }
+}
