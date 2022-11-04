@@ -1,8 +1,8 @@
 var timer
 var myTimer
 setInterval(function(){
-document.getElementById('btnT').innerHTML - "Please Wait for "+timer--+" sec.";
+document.getElementById('myButton').innerHTML - "Please Wait for "+timer--+" sec.";
 if(timer == $){
 clear Interval (myTimer);
-document.getElementById('btnT').innerHTML = "Click Me!";
+document.getElementById('myButton').innerHTML = "Click Me!";
 } }, 1000);
