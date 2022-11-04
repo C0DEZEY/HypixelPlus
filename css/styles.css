@@ -84,7 +84,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 1em;
+  width: 1px;
 }
  
 body::-webkit-scrollbar-track {
@@ -93,7 +93,7 @@ body::-webkit-scrollbar-track {
  
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
-  outline: 1px solid slategrey;
+  outline: 0.5px solid slategrey;
 }
 hr {
   margin: 1rem 0;
